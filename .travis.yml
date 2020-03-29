@@ -7,3 +7,15 @@ before_install:
 
 script:
     - docker run -e CI=true muyiwa-olaniyi/malvrix-docker-react npm run test
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-1"
+    app: "malvrix-docker-react"
+    env: "MalvrixDockerReact-env"
+    bucket_name: "elasticbeanstalk-us-east-1-725734769771"
+    bucket_path: "malvrix-docker-react"
+    on:
+        branch: master
+    access_key_id: "$AWS_ACCESS_KEY"
+    secret_access_key: "$AWS_SECRET_KEY"
