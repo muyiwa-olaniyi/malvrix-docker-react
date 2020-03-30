@@ -9,7 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Malvrix Solution <br/>
-          Quality Software Deployment
+          Quality Software Deployment <br/>
         </p>
         <a
           className="App-link"
